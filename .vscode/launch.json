@@ -11,11 +11,18 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/test.js", // Change to .js
-            "preLaunchTask": "tsc: build - tsconfig.json", // Ensure TypeScript compiles before launch
+            "program": "${workspaceFolder}/test.js",
+            "preLaunchTask": "tsc: build - tsconfig.json",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
+        },
+        {
+            "name": "Docker Node.js Launch",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "platform": "node"
         }
     ]
 }
