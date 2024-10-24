@@ -30,6 +30,6 @@ EXPOSE 3000
 # Environment variables
 ENV NODE_ENV=production
 
-# Run the app
+# Run the app starts the Next.js app in production mode
 CMD ["npm", "start"]
 
